@@ -1,0 +1,15 @@
+{
+    "name": "gulp-html-import",
+    "version": "0.0.1",
+    "author": {
+        "name": "sowth",
+        "email": "343740452@qq.com"
+    },
+    "description": "一个能导入html/css/js文件到html文件内的gulp插件。",
+    "scripts": {},
+    "dependencies": {
+        "cheerio": "^0.22.0",
+        "gulp-util": "^3.0.8",
+        "through2": "^2.0.3"
+    }
+}
