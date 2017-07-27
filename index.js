@@ -21,15 +21,15 @@ module.exports = function(baseURL) {
                     case "html":
                         $(data).insertAfter($(this));
                         break;
-                    default:
-                        $({
-                            "css": "<style>" + data + "</style>",
-                            "js": "<script>" + data + "</script>"
-                        }[type]).insertAfter($(this));
+                    case "css":
+                        $("<style>" + data + "</style>").insertAfter($(this));
+                        break;
+                    case "js":
+                        $("<script>" + data + "</script>").insertAfter($(this));
+                        break;
                 }
             }
-            $(this).remove();
-        });
+        }).remove();
         file.contents = new Buffer($.html());
         callback(null, file)
     });
